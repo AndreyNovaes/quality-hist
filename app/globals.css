@@ -17,8 +17,8 @@
   --accent-bronze: #b87333;
 
   /* Tipografia */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-primary: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: var(--font-playfair), Georgia, serif;
 
   /* Espaçamento */
   --spacing-xs: 0.5rem;
