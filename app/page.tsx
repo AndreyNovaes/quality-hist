@@ -1,4 +1,14 @@
 import Link from 'next/link'
+import {
+  Landmark,
+  Cog,
+  Bug,
+  Rocket,
+  BookOpen,
+  Users,
+  ArrowRight,
+  Sparkles
+} from 'lucide-react'
 
 export default function Home() {
   return (
@@ -12,7 +22,10 @@ export default function Home() {
               Explore a fascinante jornada dos testes, desde o <span className="hero-highlight">Código de Hamurabi</span>
               {' '}até os <span className="hero-highlight">algoritmos de Inteligência Artificial</span>
             </p>
-            <Link href="#principais-eras" className="btn btn-primary">Inicie a Jornada</Link>
+            <Link href="#principais-eras" className="btn btn-primary">
+              Inicie a Jornada
+              <ArrowRight size={20} />
+            </Link>
           </div>
         </div>
       </section>
@@ -29,7 +42,9 @@ export default function Home() {
 
           <div className="card-grid">
             <Link href="/ancient-roots" className="card">
-              <div className="card-icon">🏛️</div>
+              <div className="card-icon">
+                <Landmark size={40} />
+              </div>
               <h3 className="card-title">Raízes Antigas</h3>
               <p className="card-description">
                 Da Babilônia ao Império Romano, descubra como responsabilidade e padrões nasceram da necessidade humana
@@ -39,7 +54,9 @@ export default function Home() {
             </Link>
 
             <Link href="/industrial-revolution" className="card">
-              <div className="card-icon">⚙️</div>
+              <div className="card-icon">
+                <Cog size={40} />
+              </div>
               <h3 className="card-title">Revolução Industrial</h3>
               <p className="card-description">
                 A manufatura em massa quebrou a conexão entre artesão e produto. Surgem departamentos de inspeção
@@ -48,7 +65,9 @@ export default function Home() {
             </Link>
 
             <Link href="/software-era" className="card">
-              <div className="card-icon">🐛</div>
+              <div className="card-icon">
+                <Bug size={40} />
+              </div>
               <h3 className="card-title">Era do Software</h3>
               <p className="card-description">
                 Grace Hopper encontra uma mariposa em um computador, popularizando o termo &quot;bug&quot;. Glenford Myers
@@ -57,7 +76,9 @@ export default function Home() {
             </Link>
 
             <Link href="/modern-future" className="card">
-              <div className="card-icon">🚀</div>
+              <div className="card-icon">
+                <Rocket size={40} />
+              </div>
               <h3 className="card-title">O Futuro da Qualidade</h3>
               <p className="card-description">
                 Do Manifesto Ágil ao DevOps, qualidade se torna responsabilidade compartilhada. IA e Machine Learning
@@ -69,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* Seção Timeline Teaser */}
-      <section className="section" style={{ backgroundColor: 'white' }}>
+      <section className="section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Marcos que Mudaram a História</h2>
@@ -126,7 +147,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-lg">
-            <Link href="/timeline" className="btn btn-secondary">Explorar a Linha do Tempo Completa</Link>
+            <Link href="/timeline" className="btn btn-secondary">
+              <BookOpen size={20} />
+              Explorar a Linha do Tempo Completa
+            </Link>
           </div>
         </div>
       </section>
@@ -149,39 +173,37 @@ export default function Home() {
                 name: 'Walter A. Shewhart',
                 role: 'O Pai do Controle Estatístico de Qualidade',
                 description: 'Desenvolveu os gráficos de controle na década de 1920, transformando qualidade de inspeção reativa em controle proativo de processos.',
-                gradient: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)'
+                gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)'
               },
               {
                 initials: 'GH',
                 name: 'Grace Hopper',
                 role: 'Almirante e Pioneira da Computação',
                 description: 'Popularizou os termos "bug" e "debugging" após encontrar uma mariposa literal causando falhas no Harvard Mark II em 1947.',
-                gradient: 'linear-gradient(135deg, #cd7f32 0%, #d4af37 100%)'
+                gradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'
               },
               {
                 initials: 'WD',
                 name: 'W. Edwards Deming',
                 role: 'O Guru da Qualidade Total',
                 description: 'Levou os princípios de Shewhart ao Japão pós-guerra, criando a filosofia de melhoria contínua que revolucionou a indústria global.',
-                gradient: 'linear-gradient(135deg, #1f2937 0%, #6b7280 100%)'
+                gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
               },
               {
                 initials: 'GM',
                 name: 'Glenford J. Myers',
                 role: 'Revolucionário da Mentalidade de Testes',
                 description: 'Seu livro "The Art of Software Testing" (1979) redefiniu o propósito dos testes: não provar que funciona, mas descobrir onde falha.',
-                gradient: 'linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%)'
+                gradient: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)'
               }
             ].map((pioneer) => (
               <div key={pioneer.initials} className="pioneer-card">
-                <div className="pioneer-image">
-                  <div style={{ background: pioneer.gradient, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '3rem' }}>
-                    {pioneer.initials}
-                  </div>
+                <div className="pioneer-image" style={{ background: pioneer.gradient }}>
+                  {pioneer.initials}
                 </div>
                 <h3 className="pioneer-name">{pioneer.name}</h3>
                 <p className="pioneer-role">{pioneer.role}</p>
-                <p style={{ marginTop: '1rem', color: 'var(--medium-gray)', fontSize: '0.95rem' }}>
+                <p style={{ marginTop: '1rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
                   {pioneer.description}
                 </p>
               </div>
@@ -189,20 +211,36 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-lg">
-            <Link href="/pioneers" className="btn btn-secondary">Conhecer Todos os Pioneiros</Link>
+            <Link href="/pioneers" className="btn btn-secondary">
+              <Users size={20} />
+              Conhecer Todos os Pioneiros
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Call-to-Action Final */}
-      <section className="section" style={{ background: 'linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-gray) 100%)', color: 'white' }}>
-        <div className="container text-center">
-          <h2 style={{ color: 'white', marginBottom: '1rem' }}>Pronto para Iniciar sua Jornada?</h2>
-          <p style={{ fontSize: '1.2rem', color: 'var(--light-gray)', maxWidth: '700px', margin: '0 auto 2rem' }}>
+      <section className="section" style={{ background: 'var(--gradient-dark)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%)',
+          pointerEvents: 'none'
+        }} />
+        <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
+          <Sparkles size={48} style={{ margin: '0 auto 1rem', color: 'var(--accent-gold)' }} />
+          <h2 style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>Pronto para Iniciar sua Jornada?</h2>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 2rem' }}>
             Descubra como milênios de história moldaram as práticas de qualidade que você usa hoje.
             De tábuas de argila a algoritmos de IA, a busca pela perfeição é universal e atemporal.
           </p>
-          <Link href="/ancient-roots" className="btn btn-primary">Começar pelas Raízes Antigas</Link>
+          <Link href="/ancient-roots" className="btn btn-primary">
+            <Landmark size={20} />
+            Começar pelas Raízes Antigas
+          </Link>
         </div>
       </section>
     </>
