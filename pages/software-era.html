@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Era do Software: o nascimento da disciplina de testes">
+    <title>Era do Software - A Jornada da Qualidade</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    ⚖️ A Jornada da Qualidade
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="ancient-roots.html">Raízes Antigas</a></li>
+                        <li><a href="industrial-revolution.html">Rev. Industrial</a></li>
+                        <li><a href="software-era.html">Era do Software</a></li>
+                        <li><a href="modern-future.html">Futuro</a></li>
+                        <li><a href="timeline.html">Linha do Tempo</a></li>
+                        <li><a href="pioneers.html">Pioneiros</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🐛 A Era do Software</h1>
+            <p style="font-size: 1.3rem; color: var(--light-gray); max-width: 800px; margin: 1rem auto 0;">
+                O Nascimento de uma Disciplina: Testando o Intangível
+            </p>
+        </div>
+    </section>
+
+    <!-- Introdução -->
+    <section class="section">
+        <div class="container">
+            <div class="content-section fade-in-up">
+                <h2>Um Novo Paradigma de Qualidade</h2>
+
+                <p>
+                    Durante milênios, a humanidade aperfeiçoou técnicas para garantir a qualidade de objetos físicos:
+                    edifícios, ferramentas, produtos manufaturados. Você podia ver um defeito, tocá-lo, medi-lo com
+                    instrumentos físicos. Então, na segunda metade do século XX, surgiu algo radicalmente diferente:
+                    <strong>software</strong>.
+                </p>
+
+                <p>
+                    Software é pura lógica abstrata, instruções que existem apenas como estados elétricos em circuitos.
+                    Você não pode segurar um bug de software nas mãos, pesar uma falha lógica ou medir visualmente
+                    a qualidade de um algoritmo. Como aplicar séculos de sabedoria sobre qualidade a algo fundamentalmente
+                    <em>intangível</em>?
+                </p>
+
+                <div class="quote-box">
+                    <p>
+                        "Software é diferente de qualquer outro produto da engenharia humana. Um edifício mal
+                        construído desmorona gradualmente. Software mal construído pode funcionar perfeitamente
+                        por anos... até que uma combinação específica de condições o faça falhar catastroficamente."
+                    </p>
+                    <div class="quote-author">— O paradoxo da fragilidade invisível</div>
+                </div>
+
+                <p>
+                    Esta seção explora como pioneiros da computação inventaram, formalizaram e transformaram o
+                    teste de software de um processo ad-hoc e assistemático em uma <strong>disciplina rigorosa
+                    e essencial</strong> da engenharia moderna.
+                </p>
+            </div>
+
+            <!-- Grace Hopper e o Primeiro Bug -->
+            <div class="content-section">
+                <h2 id="hopper">🦋 "O Primeiro Bug Real"</h2>
+                <h3>Grace Hopper e a Mariposa que Mudou a Linguagem</h3>
+
+                <p>
+                    Em 9 de setembro de 1947, no Computation Laboratory da Universidade de Harvard, algo incomum
+                    aconteceu. O <strong>Harvard Mark II</strong>, um dos primeiros computadores eletromecânicos,
+                    estava apresentando comportamento errático. A equipe de engenheiros, liderada pela Almirante
+                    <strong>Grace Murray Hopper</strong>, investigou o problema.
+                </p>
+
+                <p>
+                    Eles encontraram a causa: uma mariposa (moth) presa em um relé no Painel F do computador.
+                    O inseto estava literalmente impedindo o circuito de fechar, causando falhas de cálculo.
+                    Hopper e sua equipe removeram cuidadosamente a mariposa, colaram-na no livro de registros
+                    (log book) e anotaram: <em>"First actual case of bug being found"</em> (Primeiro caso real
+                    de bug sendo encontrado).
+                </p>
+
+                <div class="info-box">
+                    <h3>Contexto Importante</h3>
+                    <p>
+                        O termo "bug" para descrever falhas técnicas já existia antes de 1947. Thomas Edison
+                        usou a palavra na década de 1870 para descrever problemas em invenções. Mas o incidente
+                        de Hopper popularizou definitivamente "bug" e "debugging" no contexto de computação,
+                        tornando-os parte permanente do vocabulário tecnológico.
+                    </p>
+                </div>
+
+                <h3>Grace Hopper: Mais que uma Mariposa</h3>
+
+                <p>
+                    A história da mariposa, embora icônica, é apenas uma pequena parte das contribuições monumentais
+                    de Grace Hopper para a computação e, indiretamente, para o teste de software:
+                </p>
+
+                <h4>Invenção do Compilador (1952)</h4>
+                <p>
+                    Hopper desenvolveu o primeiro compilador, o <strong>A-0 System</strong>, que traduzia código
+                    simbólico em linguagem de máquina. Isso foi revolucionário: permitiu que programadores escrevessem
+                    código mais abstrato e compreensível, tornando programas mais <em>testáveis</em> e <em>verificáveis</em>.
+                </p>
+
+                <h4>COBOL e Legibilidade</h4>
+                <p>
+                    Hopper foi instrumental na criação da linguagem <strong>COBOL</strong> (Common Business-Oriented
+                    Language) em 1959. COBOL priorizava legibilidade — código que se parecia com inglês comum.
+                    Código legível é código testável. Quando humanos podem entender facilmente o que o código faz,
+                    eles podem criar testes melhores e identificar erros lógicos mais rapidamente.
+                </p>
+
+                <h4>Filosofia de Validação</h4>
+                <p>
+                    Hopper enfatizava a importância de <strong>validação rigorosa</strong>. Ela acreditava que
+                    programas deveriam ser verificados metodicamente, não apenas "rodados e esperando que funcionem".
+                    Esta mentalidade ajudou a estabelecer a cultura de teste formal na computação nascente.
+                </p>
+
+                <div class="quote-box">
+                    <p>
+                        "Uma nave não afunda por causa do oceano ao seu redor; ela afunda por causa da água
+                        que entra nela. Da mesma forma, você não pode deixar negatividade e problemas externos
+                        afundarem seu espírito — mas você também não pode deixar bugs internos afundarem seu código."
+                    </p>
+                    <div class="quote-author">— Grace Hopper (adaptado)</div>
+                </div>
+
+                <h3>Legado: A Linguagem que Usamos</h3>
+
+                <p>
+                    Hoje, quando dizemos "vou debugar este código", "encontrei um bug" ou "preciso caçar este
+                    bug", estamos usando linguagem que Grace Hopper ajudou a popularizar. Mais importante, a
+                    ênfase de Hopper em legibilidade, documentação e validação estabeleceu princípios que
+                    permanecem fundamentais para qualidade de software moderna.
+                </p>
+
+                <ul style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0;">
+                    <li><strong>Código legível</strong> é mais fácil de testar e debugar</li>
+                    <li><strong>Abstração apropriada</strong> (compiladores, linguagens de alto nível) torna defeitos mais visíveis</li>
+                    <li><strong>Documentação rigorosa</strong> (como seus log books meticulosos) é essencial para rastrear e resolver problemas</li>
+                    <li><strong>Validação sistemática</strong> deve ser parte integral do desenvolvimento, não uma reflexão tardia</li>
+                </ul>
+            </div>
+
+            <!-- Separação Formal: Teste vs Depuração -->
+            <div class="content-section">
+                <h2 id="baker">🔬 A Separação Formal: Teste vs. Depuração</h2>
+                <h3>Charles L. Baker e a Profissionalização (1957)</h3>
+
+                <p>
+                    Nos primeiros dias da computação, as linhas entre escrever código, testá-lo e corrigi-lo
+                    eram nebulosas. Programadores faziam tudo: escreviam, testavam informalmente, corrigiam bugs
+                    conforme encontrados e repetiam. Não havia distinção clara entre atividades ou objetivos.
+                </p>
+
+                <p>
+                    Em 1957, <strong>Charles L. Baker</strong>, trabalhando no contexto de desenvolvimento de
+                    sistemas críticos, publicou argumentos que começaram a formalizar a separação entre
+                    <strong>teste</strong> e <strong>depuração</strong> como atividades distintas com propósitos
+                    diferentes.
+                </p>
+
+                <h3>Teste ≠ Depuração: Uma Distinção Crucial</h3>
+
+                <div class="card-grid" style="margin: 2rem 0;">
+                    <div class="card">
+                        <h3 style="color: var(--secondary-blue);">Teste (Testing)</h3>
+                        <p><strong>Objetivo:</strong> Verificar se o software atende aos requisitos e especificações</p>
+                        <p><strong>Quando:</strong> Atividade planejada, com casos de teste definidos antecipadamente</p>
+                        <p><strong>Resultado desejado:</strong> Descobrir se existem defeitos (revelação)</p>
+                        <p><strong>Quem:</strong> Idealmente, alguém diferente do programador original</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--secondary-blue);">Depuração (Debugging)</h3>
+                        <p><strong>Objetivo:</strong> Encontrar a causa raiz de um defeito conhecido e corrigi-lo</p>
+                        <p><strong>Quando:</strong> Atividade reativa, após um defeito ser descoberto</p>
+                        <p><strong>Resultado desejado:</strong> Eliminar a causa do defeito (correção)</p>
+                        <p><strong>Quem:</strong> Frequentemente o próprio programador, que entende o código profundamente</p>
+                    </div>
+                </div>
+
+                <h3>Por Que Esta Distinção Importa?</h3>
+
+                <h4>1. Mentalidades Diferentes</h4>
+                <p>
+                    <strong>Testar</strong> requer uma mentalidade de <em>ceticismo saudável</em> — assumir que
+                    defeitos existem e criá-los para revelá-los. <strong>Debugar</strong> requer uma mentalidade
+                    de <em>detetive analítico</em> — rastrear pistas, formular hipóteses e validá-las sistematicamente.
+                </p>
+
+                <h4>2. Habilidades Especializadas</h4>
+                <p>
+                    Ser excelente em escrever código não significa automaticamente ser excelente em testá-lo.
+                    Teste eficaz requer conhecimento de design de casos de teste, análise de requisitos e
+                    pensamento sobre condições extremas e edge cases.
+                </p>
+
+                <h4>3. Viés do Programador</h4>
+                <p>
+                    Programadores têm viés inconsciente ao testar seu próprio código. Eles tendem a testar o que
+                    <em>esperam que funcione</em>, não o que <em>pode falhar</em>. Um testador independente traz
+                    perspectiva fresca e objetividade.
+                </p>
+
+                <h4>4. Planejamento vs. Reação</h4>
+                <p>
+                    Teste é uma atividade que deve ser <em>planejada antecipadamente</em>, com casos de teste
+                    derivados de requisitos antes mesmo do código ser escrito. Depuração é necessariamente
+                    <em>reativa</em>, respondendo a defeitos já manifestados.
+                </p>
+
+                <div class="info-box">
+                    <h3>O Ciclo Teste-Depuração</h3>
+                    <p>
+                        Embora separados conceitualmente, teste e depuração trabalham juntos em um ciclo:
+                    </p>
+                    <ol>
+                        <li><strong>Teste</strong> executa casos de teste e revela um defeito</li>
+                        <li><strong>Depuração</strong> investiga, encontra a causa raiz e implementa uma correção</li>
+                        <li><strong>Teste de regressão</strong> verifica se a correção funcionou e não introduziu novos defeitos</li>
+                        <li>Repete até que todos os testes passem</li>
+                    </ol>
+                </div>
+
+                <h3>Impacto na Profissionalização</h3>
+
+                <p>
+                    A distinção formal entre teste e depuração teve consequências profundas:
+                </p>
+
+                <ul style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0;">
+                    <li><strong>Especialização de papéis:</strong> Surgimento de testadores profissionais como carreira distinta</li>
+                    <li><strong>Processos formalizados:</strong> Desenvolvimento de metodologias de teste (caixa-preta, caixa-branca, etc.)</li>
+                    <li><strong>Ferramentas especializadas:</strong> Desenvolvimento de debuggers, frameworks de teste e ferramentas de análise</li>
+                    <li><strong>Educação formal:</strong> Currículos de ciência da computação começam a incluir teste de software como tópico específico</li>
+                </ul>
+
+                <p>
+                    Baker ajudou a estabelecer que <strong>teste não é uma atividade casual</strong> que "qualquer
+                    programador pode fazer nas horas vagas". É uma disciplina que requer conhecimento específico,
+                    planejamento cuidadoso e, idealmente, especialistas dedicados.
+                </p>
+            </div>
+
+            <!-- Glenford Myers -->
+            <div class="content-section">
+                <h2 id="myers">💡 A Mentalidade Destrutiva de Myers</h2>
+                <h3>"The Art of Software Testing" (1979)</h3>
+
+                <p style="font-size: 1.2rem; font-weight: 500; color: var(--primary-blue);">
+                    Se existe um único livro que revolucionou fundamentalmente como pensamos sobre teste de software,
+                    é "The Art of Software Testing" de Glenford J. Myers, publicado em 1979. Este livro não apenas
+                    compilou técnicas de teste — ele <strong>redefiniu o propósito e a psicologia do teste</strong>.
+                </p>
+
+                <h3>A Definição Revolucionária</h3>
+
+                <p>
+                    Antes de Myers, o teste era frequentemente visto como uma atividade para demonstrar que o
+                    software <em>funcionava</em>. Empresas executavam testes para "provar" que seus produtos
+                    eram confiáveis. Myers virou este conceito de cabeça para baixo:
+                </p>
+
+                <div class="quote-box">
+                    <p style="font-size: 1.3rem;">
+                        <strong>"Testar é o processo de executar um programa com a intenção de encontrar erros."</strong>
+                    </p>
+                    <div class="quote-author">— Glenford J. Myers, 1979</div>
+                </div>
+
+                <p>
+                    Esta definição simples é profundamente radical. Vamos descompactá-la:
+                </p>
+
+                <h4>1. "Intenção de Encontrar Erros"</h4>
+                <p>
+                    Myers argumenta que um teste bem-sucedido é aquele que <strong>encontra um defeito</strong>,
+                    não um que passa sem erros. Se você executa 100 testes e todos passam, você aprendeu pouco
+                    — talvez o software esteja correto, ou talvez seus testes sejam fracos. Mas se um teste falha,
+                    você descobriu informação valiosa: há um problema que precisa ser corrigido.
+                </p>
+
+                <h4>2. Mudança de Mentalidade</h4>
+                <p>
+                    Testar para "provar que funciona" leva a testes otimistas e superficiais — casos felizes,
+                    entradas válidas, condições normais. Testar para "encontrar erros" leva a testes pessimistas
+                    e profundos — edge cases, entradas inválidas, condições extremas, combinações inesperadas.
+                </p>
+
+                <div class="info-box">
+                    <h3>O Paradoxo Psicológico do Teste</h3>
+                    <p>
+                        Myers identificou um problema psicológico: <strong>é muito difícil testar rigorosamente
+                        algo que você criou</strong>. Programadores investem ego e esforço em seu código. Subconsciente,
+                        eles querem que funcione. Esta motivação, embora compreensível, torna-os testadores ruins
+                        de seu próprio trabalho — eles evitam (inconscientemente) casos de teste que possam revelar
+                        falhas que eles mesmos criaram.
+                    </p>
+                    <p>
+                        <strong>Solução:</strong> Idealmente, testar deve ser feito por alguém diferente do autor
+                        do código, alguém sem investimento emocional em "provar que funciona" e que possa adotar
+                        verdadeiramente a mentalidade destrutiva.
+                    </p>
+                </div>
+
+                <h3>Princípios Fundamentais de Myers</h3>
+
+                <p>
+                    "The Art of Software Testing" estabeleceu princípios que permanecem relevantes décadas depois:
+                </p>
+
+                <h4>Princípio 1: Impossibilidade de Teste Exaustivo</h4>
+                <p>
+                    É impossível testar um programa exaustivamente (todas as combinações de entradas e estados).
+                    Mesmo programas triviais têm espaços de entrada astronômicos. Portanto, o teste deve ser
+                    <strong>estratégico</strong>, focando em áreas de maior risco e usando técnicas que maximizem
+                    a probabilidade de encontrar defeitos.
+                </p>
+
+                <h4>Princípio 2: Presença de Defeitos</h4>
+                <p>
+                    Teste pode provar a <em>presença</em> de defeitos, mas nunca pode provar sua <em>ausência</em>.
+                    Testes que passam não garantem software sem bugs — apenas que os bugs não foram encontrados
+                    pelos testes executados.
+                </p>
+
+                <h4>Princípio 3: Agrupamento de Defeitos (Pesticide Paradox)</h4>
+                <p>
+                    Defeitos tendem a se agrupar em módulos específicos. Se você encontra um bug em uma área do
+                    código, é provável que haja mais bugs nessa mesma área. <strong>Teste mais onde já encontrou
+                    problemas</strong>.
+                </p>
+
+                <h4>Princípio 4: Paradoxo do Pesticida</h4>
+                <p>
+                    Se você executa os mesmos testes repetidamente, eventualmente eles param de encontrar novos bugs.
+                    Os testes se tornam "imunes" — como pragas desenvolvendo resistência a pesticidas. <strong>Casos
+                    de teste devem ser revisados e atualizados regularmente</strong> para continuar eficazes.
+                </p>
+
+                <h3>Técnicas de Design de Casos de Teste</h3>
+
+                <p>
+                    Myers formalizou técnicas específicas para criar casos de teste eficazes:
+                </p>
+
+                <h4>Teste de Caixa-Preta (Black-Box Testing)</h4>
+                <p>
+                    Teste baseado em especificações, sem conhecimento da estrutura interna do código. Foca em
+                    <em>o que</em> o programa deve fazer, não <em>como</em> ele faz.
+                </p>
+                <ul>
+                    <li><strong>Particionamento de Equivalência:</strong> Dividir entradas em classes que devem ser tratadas similarmente</li>
+                    <li><strong>Análise de Valor Limite:</strong> Testar nos limites de partições (min, max, logo acima, logo abaixo)</li>
+                    <li><strong>Tabela de Decisão:</strong> Mapear combinações de condições e ações resultantes</li>
+                </ul>
+
+                <h4>Teste de Caixa-Branca (White-Box Testing)</h4>
+                <p>
+                    Teste baseado na estrutura interna do código. Foca em <em>como</em> o programa implementa
+                    funcionalidades.
+                </p>
+                <ul>
+                    <li><strong>Cobertura de Comandos:</strong> Executar cada linha de código pelo menos uma vez</li>
+                    <li><strong>Cobertura de Decisões:</strong> Executar cada branch (true/false) de condições</li>
+                    <li><strong>Cobertura de Caminhos:</strong> Executar diferentes caminhos de execução possíveis</li>
+                </ul>
+
+                <div class="quote-box">
+                    <p>
+                        "Um teste que não encontra defeitos não é necessariamente um bom teste. Pode ser apenas
+                        um teste fraco. O verdadeiro teste de um teste é sua capacidade de revelar erros quando
+                        eles existem."
+                    </p>
+                    <div class="quote-author">— Glenford J. Myers</div>
+                </div>
+
+                <h3>Impacto e Legado</h3>
+
+                <p>
+                    "The Art of Software Testing" se tornou um dos livros mais influentes da engenharia de software.
+                    Seu impacto inclui:
+                </p>
+
+                <ul style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0;">
+                    <li><strong>Profissionalização do QA:</strong> Estabeleceu teste como uma disciplina técnica séria que requer expertise</li>
+                    <li><strong>Educação formal:</strong> O livro se tornou leitura obrigatória em cursos de engenharia de software globalmente</li>
+                    <li><strong>Certificações:</strong> Princípios de Myers fundamentam certificações como ISTQB (International Software Testing Qualifications Board)</li>
+                    <li><strong>Cultura de qualidade:</strong> Influenciou organizações a valorizar testadores como contribuidores críticos, não apenas "verificadores"</li>
+                </ul>
+
+                <h3>Relevância Moderna</h3>
+
+                <p>
+                    Mais de 40 anos após sua publicação, os princípios de Myers permanecem fundamentais:
+                </p>
+
+                <ul style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0;">
+                    <li><strong>Testes unitários (TDD):</strong> A mentalidade "escrever testes para falhar" ecoa a definição de Myers</li>
+                    <li><strong>Code coverage:</strong> Métricas de cobertura são descendentes diretas de técnicas de caixa-branca</li>
+                    <li><strong>Fuzzing e chaos engineering:</strong> Versões modernas da mentalidade destrutiva — atacar sistemas para encontrar fraquezas</li>
+                    <li><strong>Bug bounties:</strong> Recompensar quem encontra bugs, não quem "prova que funciona"</li>
+                </ul>
+
+                <p style="font-size: 1.2rem; margin-top: 2rem; font-weight: 500;">
+                    Myers nos ensinou que <strong>testar não é validar otimismo, é desafiar pressupostos</strong>.
+                    O melhor testador não é quem encontra que tudo funciona — é quem encontra o que está quebrado
+                    antes que os usuários o façam.
+                </p>
+            </div>
+
+            <!-- Conclusão da Seção -->
+            <div class="content-section">
+                <h2>🖥️ O Legado da Era do Software</h2>
+                <h3>De Experimentos a Engenharia</h3>
+
+                <p>
+                    A era do software transformou teste de uma atividade informal em uma <strong>disciplina de
+                    engenharia rigorosa</strong>. Três contribuições foram fundamentais:
+                </p>
+
+                <div class="card-grid" style="margin: 2rem 0;">
+                    <div class="card">
+                        <h3 style="color: var(--bronze);">Grace Hopper</h3>
+                        <p>Popularizou a linguagem (bug/debugging) e enfatizou legibilidade e validação sistemática.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--bronze);">Charles Baker</h3>
+                        <p>Formalizou a separação entre teste (revelar) e depuração (corrigir) como disciplinas distintas.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--bronze);">Glenford Myers</h3>
+                        <p>Redefiniu o propósito do teste: não provar que funciona, mas encontrar onde falha.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--bronze);">Resultado</h3>
+                        <p>Teste se torna uma profissão reconhecida, com métodos, ferramentas e cultura próprios.</p>
+                    </div>
+                </div>
+
+                <p>
+                    Ao final da era clássica do software (décadas de 1970-1990), os fundamentos estavam estabelecidos:
+                </p>
+
+                <ul style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0;">
+                    <li>Teste é uma atividade planejada e profissional, não casual</li>
+                    <li>Objetivo é revelar defeitos, não validar pressupostos</li>
+                    <li>Requer mentalidade diferente (cética/destrutiva) da programação</li>
+                    <li>Técnicas formais (caixa-preta, caixa-branca) guiam design de testes</li>
+                    <li>Independência entre quem desenvolve e quem testa melhora qualidade</li>
+                </ul>
+
+                <div class="quote-box">
+                    <p>
+                        "A era do software nos ensinou que código intangível requer validação tangível.
+                        Não podemos ver bugs de software, mas podemos criar testes sistemáticos que os forçam
+                        a se revelar."
+                    </p>
+                    <div class="quote-author">— Síntese da era dos testes de software</div>
+                </div>
+
+                <p style="font-size: 1.2rem; margin-top: 2rem;">
+                    Mas a evolução não parou. O século XXI traria mudanças ainda mais radicais: desenvolvimento
+                    ágil, integração contínua, DevOps e, finalmente, inteligência artificial. A jornada da
+                    qualidade estava prestes a acelerar exponencialmente...
+                </p>
+
+                <div class="text-center mt-lg">
+                    <a href="modern-future.html" class="btn btn-primary">
+                        Próxima Era: O Futuro da Qualidade →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Página Inicial</a></li>
+                        <li><a href="ancient-roots.html">Raízes Antigas</a></li>
+                        <li><a href="industrial-revolution.html">Revolução Industrial</a></li>
+                        <li><a href="software-era.html">Era do Software</a></li>
+                        <li><a href="modern-future.html">O Futuro</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="timeline.html">Linha do Tempo Completa</a></li>
+                        <li><a href="pioneers.html">Pioneiros da Qualidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Sobre Este Projeto</h3>
+                    <p style="color: var(--light-gray); font-size: 0.95rem;">
+                        Um site educacional dedicado a preservar e compartilhar a rica história
+                        dos testes e garantia de qualidade, desde a antiguidade até a era moderna.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 A Jornada da Qualidade. Criado para fins educacionais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
