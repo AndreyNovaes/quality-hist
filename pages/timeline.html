@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linha do tempo completa da história da qualidade e testes">
+    <title>Linha do Tempo - A Jornada da Qualidade</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold) 0%, var(--primary-blue) 50%, var(--secondary-blue) 100%);
+        }
+
+        .timeline-event {
+            position: relative;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-event:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-event:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-event:nth-child(odd) .timeline-content {
+            margin-right: calc(50% + 2rem);
+            text-align: right;
+        }
+
+        .timeline-event:nth-child(even) .timeline-content {
+            margin-left: calc(50% + 2rem);
+            text-align: left;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+            z-index: 10;
+        }
+
+        .timeline-year {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--dark-gray);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .timeline-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--secondary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        .timeline-link:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-event {
+                flex-direction: row !important;
+            }
+
+            .timeline-event:nth-child(odd) .timeline-content,
+            .timeline-event:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    ⚖️ A Jornada da Qualidade
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="ancient-roots.html">Raízes Antigas</a></li>
+                        <li><a href="industrial-revolution.html">Rev. Industrial</a></li>
+                        <li><a href="software-era.html">Era do Software</a></li>
+                        <li><a href="modern-future.html">Futuro</a></li>
+                        <li><a href="timeline.html">Linha do Tempo</a></li>
+                        <li><a href="pioneers.html">Pioneiros</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>⏳ Linha do Tempo Interativa</h1>
+            <p style="font-size: 1.3rem; color: var(--light-gray); max-width: 800px; margin: 1rem auto 0;">
+                4.000 Anos de História da Qualidade em Uma Jornada Visual
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+        <div class="container-wide">
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- ~1750 a.C. - Código de Hamurabi -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='ancient-roots.html#hamurabi'">
+                        <div class="timeline-year">~1750 a.C.</div>
+                        <h3 class="timeline-title">O Código de Hamurabi</h3>
+                        <p class="timeline-description">
+                            Na antiga Babilônia, o rei Hamurabi estabelece as primeiras leis de responsabilidade por qualidade.
+                            Se um construtor constrói uma casa que desmorona e mata o dono, o construtor será morto — a primeira
+                            "garantia de qualidade" documentada com consequências dramáticas.
+                        </p>
+                        <a href="ancient-roots.html#hamurabi" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- ~2560 a.C. - Pirâmides -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='ancient-roots.html#egito'">
+                        <div class="timeline-year">~2560 a.C.</div>
+                        <h3 class="timeline-title">Construção das Pirâmides de Gizé</h3>
+                        <p class="timeline-description">
+                            Engenheiros egípcios demonstram maestria em precisão e controle de qualidade. A Grande Pirâmide,
+                            com 2,3 milhões de blocos de pedra, apresenta tolerâncias mínimas e alinhamento quase perfeito
+                            com pontos cardeais — evidência de sistemas rigorosos de medição e verificação.
+                        </p>
+                        <a href="ancient-roots.html#egito" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- ~221 a.C. - China -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='ancient-roots.html#china'">
+                        <div class="timeline-year">~221 a.C.</div>
+                        <h3 class="timeline-title">Padronização na China Imperial</h3>
+                        <p class="timeline-description">
+                            O Imperador Qin Shi Huang institui políticas exigindo que produtos sejam marcados com o nome do
+                            fabricante. Este sistema de rastreabilidade permitia identificar a origem de defeitos e
+                            responsabilizar artesãos — antecipando conceitos modernos de accountability.
+                        </p>
+                        <a href="ancient-roots.html#china" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- Século XIII - Guildas -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='ancient-roots.html#guildas'">
+                        <div class="timeline-year">Século XIII</div>
+                        <h3 class="timeline-title">Guildas Medievais e a Obra-Prima</h3>
+                        <p class="timeline-description">
+                            Guildas de artesãos europeus criam sistemas sofisticados de garantia de qualidade, incluindo
+                            padrões rigorosos, inspeções regulares e o conceito de "obra-prima" — um teste final de
+                            maestria que o artesão deve passar para se tornar mestre certificado.
+                        </p>
+                        <a href="ancient-roots.html#guildas" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 1800s - Revolução Industrial -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='industrial-revolution.html#inspecao'">
+                        <div class="timeline-year">Início 1800s</div>
+                        <h3 class="timeline-title">Revolução Industrial e Inspeção em Massa</h3>
+                        <p class="timeline-description">
+                            A manufatura em massa quebra a conexão entre artesão e produto. Surgem departamentos de inspeção
+                            dedicados a separar produtos bons de ruins no final da linha — uma abordagem reativa que,
+                            embora ineficiente, era melhor que nenhum controle.
+                        </p>
+                        <a href="industrial-revolution.html#inspecao" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 1911 - Taylor -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='industrial-revolution.html#taylor'">
+                        <div class="timeline-year">1911</div>
+                        <h3 class="timeline-title">Gerenciamento Científico de Taylor</h3>
+                        <p class="timeline-description">
+                            Frederick W. Taylor publica "The Principles of Scientific Management", introduzindo medição
+                            sistemática e padronização de processos. Aumenta produtividade mas aprofunda a separação entre
+                            quem "faz" e quem "verifica" qualidade.
+                        </p>
+                        <a href="industrial-revolution.html#taylor" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 1924 - Shewhart -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='industrial-revolution.html#shewhart'">
+                        <div class="timeline-year">1924</div>
+                        <h3 class="timeline-title">🌟 Gráficos de Controle de Shewhart</h3>
+                        <p class="timeline-description">
+                            MARCO REVOLUCIONÁRIO: Walter A. Shewhart cria os gráficos de controle estatístico na Bell Labs.
+                            Transforma qualidade de inspeção de produtos para controle de processos. Este é o nascimento
+                            do Controle Estatístico de Qualidade (SQC) — qualidade se torna ciência.
+                        </p>
+                        <a href="industrial-revolution.html#shewhart" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 1947 - Grace Hopper -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='software-era.html#hopper'">
+                        <div class="timeline-year">1947</div>
+                        <h3 class="timeline-title">O "Primeiro Bug Real"</h3>
+                        <p class="timeline-description">
+                            Grace Hopper e sua equipe encontram uma mariposa presa em um relé do Harvard Mark II, causando
+                            falhas. O incidente populariza os termos "bug" e "debugging" no vocabulário de computação,
+                            tornando-se parte permanente da cultura de desenvolvimento de software.
+                        </p>
+                        <a href="software-era.html#hopper" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 1957 - Separação Teste vs Debug -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='software-era.html#baker'">
+                        <div class="timeline-year">1957</div>
+                        <h3 class="timeline-title">Separação Formal: Teste vs. Depuração</h3>
+                        <p class="timeline-description">
+                            Charles L. Baker argumenta pela distinção formal entre teste (verificar conformidade com
+                            requisitos) e depuração (corrigir defeitos conhecidos). Este é um passo crítico na
+                            profissionalização do teste como disciplina separada.
+                        </p>
+                        <a href="software-era.html#baker" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 1979 - Myers -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='software-era.html#myers'">
+                        <div class="timeline-year">1979</div>
+                        <h3 class="timeline-title">🌟 "The Art of Software Testing"</h3>
+                        <p class="timeline-description">
+                            MARCO REVOLUCIONÁRIO: Glenford J. Myers publica seu livro seminal redefinindo teste: "Testar é
+                            o processo de executar um programa com a intenção de encontrar erros." A mentalidade destrutiva
+                            que transforma como a indústria pensa sobre qualidade de software.
+                        </p>
+                        <a href="software-era.html#myers" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 2001 - Manifesto Ágil -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='modern-future.html#agile'">
+                        <div class="timeline-year">2001</div>
+                        <h3 class="timeline-title">🌟 O Manifesto Ágil</h3>
+                        <p class="timeline-description">
+                            MARCO REVOLUCIONÁRIO: Dezessete desenvolvedores se reúnem em Snowbird, Utah, e criam o Manifesto
+                            Ágil. Teste se torna atividade contínua integrada ao desenvolvimento, não uma fase final.
+                            Qualidade é responsabilidade de toda a equipe, não apenas de QA.
+                        </p>
+                        <a href="modern-future.html#agile" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 2009 - DevOps -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='modern-future.html#devops'">
+                        <div class="timeline-year">2009</div>
+                        <h3 class="timeline-title">Surgimento do DevOps</h3>
+                        <p class="timeline-description">
+                            Patrick Debois organiza os primeiros "DevOpsDays" na Bélgica. O movimento DevOps quebra silos
+                            entre desenvolvimento e operações, introduzindo CI/CD, infraestrutura como código e cultura de
+                            responsabilidade compartilhada pela qualidade em produção.
+                        </p>
+                        <a href="modern-future.html#devops" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 2010s - Shift-Left -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='modern-future.html#devops'">
+                        <div class="timeline-year">Anos 2010</div>
+                        <h3 class="timeline-title">Shift-Left Testing</h3>
+                        <p class="timeline-description">
+                            O conceito de "shift-left" (mover para a esquerda) se populariza: trazer teste o mais cedo
+                            possível no ciclo de desenvolvimento. Defeitos descobertos em requisitos custam 1x, em produção
+                            custam 100x. TDD, BDD e automação se tornam mainstream.
+                        </p>
+                        <a href="modern-future.html#devops" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- 2020s - IA -->
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" onclick="window.location.href='modern-future.html#ai'">
+                        <div class="timeline-year">Anos 2020</div>
+                        <h3 class="timeline-title">IA e Machine Learning em Testes</h3>
+                        <p class="timeline-description">
+                            Inteligência Artificial transforma teste de software: geração automática de casos de teste,
+                            auto-healing de testes, análise preditiva de defeitos, testes visuais com reconhecimento de
+                            imagem e testes autônomos. O futuro da qualidade está aqui.
+                        </p>
+                        <a href="modern-future.html#ai" class="timeline-link">Explorar detalhes →</a>
+                    </div>
+                </div>
+
+                <!-- Futuro -->
+                <div class="timeline-event">
+                    <div class="timeline-dot" style="background: var(--secondary-blue);"></div>
+                    <div class="timeline-content" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%); border: 2px solid var(--secondary-blue);">
+                        <div class="timeline-year" style="color: var(--secondary-blue);">Futuro</div>
+                        <h3 class="timeline-title">A Jornada Continua...</h3>
+                        <p class="timeline-description">
+                            Testes quânticos? Validação de sistemas de IA por outras IAs? Qualidade em realidades virtuais
+                            compartilhadas? O futuro da qualidade será moldado por desafios que ainda não imaginamos —
+                            mas uma verdade permanece: a busca pela excelência é eterna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Página Inicial</a></li>
+                        <li><a href="ancient-roots.html">Raízes Antigas</a></li>
+                        <li><a href="industrial-revolution.html">Revolução Industrial</a></li>
+                        <li><a href="software-era.html">Era do Software</a></li>
+                        <li><a href="modern-future.html">O Futuro</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="timeline.html">Linha do Tempo Completa</a></li>
+                        <li><a href="pioneers.html">Pioneiros da Qualidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Sobre Este Projeto</h3>
+                    <p style="color: var(--light-gray); font-size: 0.95rem;">
+                        Um site educacional dedicado a preservar e compartilhar a rica história
+                        dos testes e garantia de qualidade, desde a antiguidade até a era moderna.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 A Jornada da Qualidade. Criado para fins educacionais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
